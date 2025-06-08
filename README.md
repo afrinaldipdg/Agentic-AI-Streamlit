@@ -87,6 +87,8 @@ API Cuaca	Info cuaca real-time (jika digunakan)
 ```
 📸 Screenshot
 
+![Tampilan Aplikasi](docs/agentic_ai.png)
+
 
 
 
