@@ -1,0 +1,95 @@
+/* style.css */
+
+/* Overall App Background and Font */
+[data-testid="stAppViewContainer"] {
+    background-color: #F0F2F6; /* Light gray background for professionalism */
+    color: #333333; /* Darker text for readability */
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Professional, clean font */
+    
+    /* Green frame around the entire app content */
+    border: 5px solid #25D366; /* WhatsApp Green */
+    border-radius: 15px; /* Softly rounded corners */
+    padding: 20px; /* Add some internal padding */
+    box-sizing: border-box; /* Ensures padding and border are included in element's total size */
+}
+
+/* Header/Title */
+h1 {
+    color: #25D366; /* WhatsApp Green for the title */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 10px; /* Some padding above title */
+}
+
+/* Chat Input Bar (bottom input field) */
+[data-testid="stChatInput"] > div > div {
+    border: 2px solid #25D366; /* Green border for the chat input */
+    border-radius: 25px; /* More rounded pill-shape */
+    padding: 5px 15px;
+    background-color: #FFFFFF; /* White background for input field */
+}
+
+/* User Message Bubble */
+/* Targetting the user message container specifically */
+[data-testid="chat-message-container"] > div:nth-child(2) [data-testid="stMarkdown"] {
+    background-color: #DCF8C6 !important; /* Soft light green for user messages (WhatsApp like) */
+    border-radius: 15px 15px 0 15px !important; /* Rounded corners, flat bottom-left */
+    color: #333333;
+    padding: 10px 15px;
+    margin-left: auto; /* Pushes user bubble to the right */
+    max-width: 80%; /* Limit bubble width */
+    word-wrap: break-word; /* Ensure long words wrap */
+}
+
+/* Assistant Message Bubble */
+/* Targetting the assistant message container specifically */
+[data-testid="chat-message-container"] > div:nth-child(1) [data-testid="stMarkdown"] {
+    background-color: #E0E0E0 !important; /* Light gray for assistant messages */
+    border-radius: 15px 15px 15px 0 !important; /* Rounded corners, flat bottom-right */
+    color: #333333;
+    padding: 10px 15px;
+    margin-right: auto; /* Pushes assistant bubble to the left */
+    max-width: 80%; /* Limit bubble width */
+    word-wrap: break-word; /* Ensure long words wrap */
+}
+
+/* Adjust avatar padding for better alignment (optional, visual tweak) */
+[data-testid="chat-message-container"] [data-testid="stImage"] {
+    padding-top: 5px; /* Adjust as needed for better vertical alignment with text */
+}
+
+/* Ensure the main content area has enough padding at the bottom for the fixed footer */
+/* This class might change with Streamlit versions, but it's often for the main block */
+.st-emotion-cache-1px211y.e1f1d6gn0 { /* This is a common class for Streamlit's main content padding */
+    padding-bottom: 80px; /* Make space for the fixed footer */
+}
+
+/* Footer specific styles (already in app.py HTML, but good to have here too if needed) */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Streamlit's content is usually centered, adjust width and left for footer */
+    left: 0;
+    background-color: #F0F2F6; /* Match app background or slightly darker */
+    color: #808080; /* Gray text for copyright */
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    border-top: 1px solid #E0E0E0; /* Subtle line above footer */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05); /* Subtle shadow above footer */
+    z-index: 100; /* Ensure footer is on top of other elements */
+}
+.footer a {
+    color: #25D366; /* Green link in footer */
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust main content padding to prevent footer overlap */
+.st-emotion-cache-1px211y { /* This is a common class for the main content container */
+    padding-bottom: 80px; /* Ensure there's space for the fixed footer */
+}
