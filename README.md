@@ -1,6 +1,6 @@
 # 🔮 Agentic AI Streamlit
 
-**Agentic AI Streamlit** adalah aplikasi web interaktif yang menggabungkan kekuatan agen AI otonom berbasis OpenAI (GPT-4/GPT‑4o) dengan framework LangChain, serta dukungan data dari Wikipedia dan layanan cuaca. Aplikasi ini dirancang untuk memberikan respons yang cerdas, kontekstual, dan otomatis terhadap pertanyaan pengguna melalui antarmuka berbasis Streamlit.
+**Agentic AI Streamlit** adalah aplikasi web interaktif yang menggabungkan kekuatan agen AI otonom berbasis Gemini (gemini-2.5-flash) dengan framework LangChain, serta dukungan data dari Wikipedia dan layanan cuaca. Aplikasi ini dirancang untuk memberikan respons yang cerdas, kontekstual, dan otomatis terhadap pertanyaan pengguna melalui antarmuka berbasis Streamlit.
 
 ---
 
