@@ -11,12 +11,16 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # Import alat lain yang masih Anda gunakan
 from tools.calc_tool import get_calc_tool
 from tools.memory_tool import get_memory_tool
+import streamlit as st
+
 # Impor Tavily Search Tool
 from langchain_community.tools.tavily_search import TavilySearchResults
 
 # --- AKHIR PERUBAHAN ---
 
 load_dotenv()
+
+@st.cache_resource
 
 def create_agent():
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-preview-05-20", temperature=0)
