@@ -11,6 +11,4 @@ openai==1.84.0
 pydantic==2.11.5 # Penting karena kesalahan validasi yang Anda alami
 pydantic-core==2.33.2 # Ikut pydantic
 requests==2.32.3 # Digunakan di ddg_tor_tool.py
-socks==0 # Digunakan di ddg_tor_tool.py
-PySocks==1.7.1 # Digunakan di ddg_tor_tool.py (pastikan versi ini cocok dengan socks)
 duckduckgo-search==8.0.2 # Jika tools/search_tool.py masih digunakan atau ada dependensi implisit
