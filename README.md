@@ -7,9 +7,7 @@
 ## 📌 Ringkasan Fitur
 
 - ✅ **Agen AI Otonom** yang dapat mengambil keputusan dan melakukan tindakan.
-- 🌐 **Integrasi Wikipedia** untuk menjawab pertanyaan berbasis pengetahuan umum.
-- ☁️ **Tool Cuaca** untuk memberikan informasi prakiraan berdasarkan lokasi.
-- 🧠 **Pemrosesan Bahasa Alami** menggunakan model GPT terkini dari OpenAI.
+- 🧠 **Pemrosesan Bahasa Alami** menggunakan model Gemini terkini dari google.
 - 🎛️ **Antarmuka Interaktif** berbasis Streamlit yang mudah digunakan.
 - 🔐 **Manajemen API Key Aman** menggunakan Streamlit Secrets.
 
@@ -38,7 +36,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 4. Konfigurasi API Key
-Buat file .streamlit/secrets.toml dan isi dengan format berikut:
+Buat file .env dan isi dengan format berikut:
 ```
 OPENAI_API_KEY = "sk-xxxxxxx"
 ```
@@ -58,22 +56,21 @@ Pengguna mengetik pertanyaan di antarmuka Streamlit.
 
 Agen AI akan mengevaluasi konteks pertanyaan:
 
-Jika perlu mencari pengetahuan umum → gunakan tool Wikipedia.
-
-Jika terkait lokasi/cuaca → gunakan tool Cuaca.
-
 Agen mengembalikan jawaban dalam format percakapan.
 
 📂 Struktur Direktori
 ```
 Agentic-AI-Streamlit/
+├── tools
+    ├── memory_tool.py
+    ├── search_tool.py
+    └── calc_tool.py
+├── style.css    
 ├── app.py                  # Entry point aplikasi Streamlit
-├── agent_ai.py             # Logika LangChain Agent dan Tool
-├── wiki_tool.py            # Tool khusus untuk pencarian Wikipedia
-├── weather_tool.py         # Tool khusus untuk informasi cuaca
+├── agent.py             # Logika LangChain Agent dan Tool
+├── main.py
 ├── requirements.txt        # Daftar dependensi Python
-└── .streamlit/
-    └── secrets.toml        # Tempat penyimpanan API key (jangan commit!)
+└── .env                   # Tempat penyimpanan API key (jangan commit!)
 ```
 🧰 Teknologi yang Digunakan
 ```
